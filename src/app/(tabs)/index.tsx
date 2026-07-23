@@ -3,7 +3,7 @@ import ListHeroCard from "@/components/list/ListHeroCard";
 import PendingItemCard from "@/components/list/PendingItemCard";
 import TabScreenBackground from "@/components/TabScreenBackground";
 import { useGroceryStore } from "@/store/grocery-store";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, Platform, StyleSheet, Text, View } from "react-native";
 
 export default function ListScreen() {
   const { items } = useGroceryStore();
@@ -19,7 +19,9 @@ export default function ListScreen() {
       contentInsetAdjustmentBehavior="automatic"
       renderItem={({ item }) => <PendingItemCard item={item} />}
       ListHeaderComponent={
-        <View style={{ gap: 14 }}>
+        <View
+          style={{ gap: 14, marginTop: Platform.OS === "android" ? 40 : 0 }}
+        >
           <TabScreenBackground />
           <ListHeroCard />
 

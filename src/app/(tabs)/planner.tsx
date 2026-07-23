@@ -3,7 +3,7 @@ import PlannerHeroImage from "@/components/planner/PlannerHeroImage";
 import TabScreenBackground from "@/components/TabScreenBackground";
 import { useGroceryStore } from "@/store/grocery-store";
 import FontAwesome from "@react-native-vector-icons/fontawesome";
-import { Text, View } from "react-native";
+import { Platform, Text, View } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-controller";
 
 const PlannerScreen = () => {
@@ -28,7 +28,9 @@ const PlannerScreen = () => {
     >
       <TabScreenBackground />
 
-      <View className="gap-4 rounded-3xl border border-border bg-card/70 p-5">
+      <View
+        className={`gap-4 rounded-3xl border border-border bg-card/70 p-5 ${Platform.OS === "android" ? "mt-6" : "mt-0"}`}
+      >
         <View className="flex-row items-start justify-between">
           <View className="flex-1 pr-4">
             <Text className="text-xs font-semibold uppercase tracking-[1.2px] text-muted-foreground">

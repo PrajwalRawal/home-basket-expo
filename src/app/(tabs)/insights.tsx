@@ -4,7 +4,7 @@ import InsightsPrioritySection from "@/components/insights/InsightsPrioritySecti
 import InsightsStatsSection from "@/components/insights/InsightsStatsSection";
 import UserProfile from "@/components/insights/UserProfile";
 import TabScreenBackground from "@/components/TabScreenBackground";
-import { ScrollView } from "react-native";
+import { Platform, ScrollView } from "react-native";
 
 const InsightsScreen = () => {
   return (
@@ -12,7 +12,11 @@ const InsightsScreen = () => {
       <ScrollView
         className="flex-1 bg-background py-4"
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ padding: 20, gap: 14 }}
+        contentContainerStyle={{
+          padding: 20,
+          gap: 14,
+          marginTop: Platform.OS === "android" ? 20 : 0,
+        }}
         contentInsetAdjustmentBehavior="automatic"
       >
         <TabScreenBackground />
