@@ -38,7 +38,15 @@
           "imageWidth": 76
         }
       ],
-      "expo-web-browser"
+      "expo-web-browser",
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "home-basket",
+          "organization": "prajwal-rawal"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,

@@ -8,6 +8,7 @@
     "@neondatabase/serverless": "^1.1.0",
     "@react-native-vector-icons/fontawesome": "^13.1.2",
     "@react-native-vector-icons/fontawesome6": "^13.1.2",
+    "@sentry/react-native": "^8.19.0",
     "babel-preset-expo": "^57.0.3",
     "drizzle-orm": "^0.45.2",
     "expo": "~57.0.7",
