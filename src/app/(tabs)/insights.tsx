@@ -1,3 +1,7 @@
+import ClearCompletedButton from "@/components/insights/ClearCompletedButton";
+import InsightsCategorySection from "@/components/insights/InsightsCategorySection";
+import InsightsPrioritySection from "@/components/insights/InsightsPrioritySection";
+import InsightsStatsSection from "@/components/insights/InsightsStatsSection";
 import UserProfile from "@/components/insights/UserProfile";
 import TabScreenBackground from "@/components/TabScreenBackground";
 import { ScrollView } from "react-native";
@@ -14,6 +18,10 @@ const InsightsScreen = () => {
         <TabScreenBackground />
 
         <UserProfile />
+        <InsightsStatsSection />
+        <InsightsCategorySection />
+        <InsightsPrioritySection />
+        <ClearCompletedButton />
       </ScrollView>
     </>
   );
